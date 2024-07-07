@@ -1,0 +1,120 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 3,
+    "identityHash": "35012f9b7a8342cfafd43dea7e0de31d",
+    "entities": [
+      {
+        "tableName": "Data",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`englishName` TEXT NOT NULL, `englishNameTranslation` TEXT NOT NULL, `name` TEXT NOT NULL, `number` INTEGER NOT NULL, `numberOfAyahs` INTEGER NOT NULL, `revelationType` TEXT NOT NULL, PRIMARY KEY(`number`))",
+        "fields": [
+          {
+            "fieldPath": "englishName",
+            "columnName": "englishName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "englishNameTranslation",
+            "columnName": "englishNameTranslation",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "number",
+            "columnName": "number",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "numberOfAyahs",
+            "columnName": "numberOfAyahs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "revelationType",
+            "columnName": "revelationType",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "number"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "DataDetails",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`ayahs` TEXT, `englishName` TEXT, `englishNameTranslation` TEXT, `name` TEXT, `number` INTEGER, `numberOfAyahs` INTEGER, `revelationType` TEXT, PRIMARY KEY(`number`))",
+        "fields": [
+          {
+            "fieldPath": "ayahs",
+            "columnName": "ayahs",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "englishName",
+            "columnName": "englishName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "englishNameTranslation",
+            "columnName": "englishNameTranslation",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "number",
+            "columnName": "number",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "numberOfAyahs",
+            "columnName": "numberOfAyahs",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "revelationType",
+            "columnName": "revelationType",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "number"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '35012f9b7a8342cfafd43dea7e0de31d')"
+    ]
+  }
+}
