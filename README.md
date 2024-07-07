@@ -37,6 +37,7 @@ QuranApp is an Android application that allows users to browse and view details 
 - **Retrofit**: Type-safe HTTP client for networking.
 - **Gson**: JSON serialization/deserialization library for Java and Kotlin.
 - **Coroutines**: Asynchronous programming for simplifying code that executes asynchronously.
+- **Hilt** : Dependency injection library for Android.
 
 ### API:
 - **api.alquran.cloud**: External API used to fetch Quranic data including surahs and their details.
